@@ -3,48 +3,45 @@ import java.util.Scanner;
 public class IT24103034Lab5Q1 {
 
 	public static void main(String[] args) {
+	
+		int firstInteger,secondInteger,thirdInteger,smallest,largest;
 
 		Scanner input=new Scanner(System.in);
 
 		System.out.println("Enter the first integer:");
-		int firstInteger=input.nextInt();
+		 firstInteger=input.nextInt();
 
 		System.out.println("Enter the second integer:");
-		int secondInteger=input.nextInt();
+		 secondInteger=input.nextInt();
 
 		System.out.println("Enter the third integer:");
-		int thirdInteger=input.nextInt();
-		
-		System.out.println("User entered numbers are:"+firstInteger+" "+secondInteger+" "+thirdInteger);
-		
-		if(firstInteger<secondInteger) {
-			int min=firstInteger;
-			int max=secondInteger;
-		}
-		else {
-			int min=secondInteger;
-			int max=firstInteger;
+		 thirdInteger=input.nextInt();
+
+		System.out.println("User enterednnumbers are:"+firstInteger+" "+secondInteger+" "+thirdInteger+" ");
+
+		if(firstInteger>secondInteger)
+		{
+			 largest=firstInteger;
+			 smallest=secondInteger;
 		}
 
-		 if(secondInteger<thirdInteger) {
-			int min=secondInteger;
-			int max=thirdInteger;
+		else
+		{
+			 largest=secondInteger;
+			 smallest=firstInteger;
 		}
-	
-		else {
-			int min=thirdInteger;
-			int max=secondInteger;
+
+		if(thirdInteger>largest)
+		{
+			  largest=thirdInteger;
 		}
-		if(firstInteger<thirdInteger) {
-			int min=firstInteger;
-			int max=thirdInteger;
+
+		if(thirdInteger<smallest)
+		{
+			 smallest=thirdInteger;
 		}
-		else {
-			int min=thirdInteger;
-			int max=firstInteger;
-		}
-			
-		System.out.println("The smallest number is:"+min);
-		System.out.println("The largest number is:"+max);
+
+		System.out.println("The smallest number is:"+smallest);
+		System.out.println("The largest number is:"+largest);
 	}
 }
